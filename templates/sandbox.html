@@ -1,0 +1,170 @@
+<link
+      href="../static/css/style_sandbox.css"
+      rel="stylesheet"
+      type="text/css"/>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+
+<center>
+
+    <div class="titre">The Project Manager</div>
+    <div class="degrade-titre"></div>
+    <a class="menu_gauche" href="/sandbox"></a>
+    <a class="menu_droite" href="/overview"></a>
+    <span class="texte_menu_gauche">Mon Profil</span>
+    <span class="texte_menu_droite">Project Overview</span>
+    <div class ="espace_inter_menu"></div>
+    <div class="degrade-titre"></div>    
+    <br><br>
+
+    <div class="bienvenue-wrapper">
+        <div class="msg_bienvenue">Bienvenue {{ nom }}</div><br>
+        <div class="bienvenue-divider">
+    </div>
+
+    {% block content %}
+
+        <div class="taches-dashboard">
+            <form action="" , method="POST">
+                <div class="taches_header">
+                    <span class="taches_header_label">Tâches</span>
+                    <div class="tache_underline"></div>
+                </div> 
+                    <br><br>
+
+                <div class="taches-wrapper">
+                        {% for element in taches %}
+                            <label>
+                                {% if element[0] %}
+                                    <input type="checkbox" class="strikethrough" name="task_check" value="done_{{element[3]}}" checked/>
+                                {% else %}
+                                    <input type="checkbox" class="strikethrough" name="task_check" value="done_{{element[3]}}"/>
+                                {% endif %}
+                                <span class="tache" name="done{{element[3]}}">{{element[1]}}</span>
+                            </label>
+                            {% if id==0 %}
+                                <input type="submit" class="del_btn" name="supp_{{element[3]}}"  value="Supprimer" />
+                            {% endif %}
+                                <div class="tache_divider"></div>
+                            <br>
+                        {% endfor %}
+                
+                </div>
+                <div class="taches_controllers">
+
+                    <input type="submit" class="submit_check_btn" name="check_submit" value="Valider taches" /><br>
+                {% if id==0 %}
+
+                    <select name="menu_choix_utilisateur_tache" id="choix_individu" class="choix_individu">
+                        <option> -- Membre -- </option>
+                        {% for element in utilisateurs %}
+                            <option value="{{element[0]}}">{{element[0]}}</option>
+                        {% endfor %}
+                    </select>
+
+                    <input type="text" name="nom_tache" autocomplete="off" placeholder="Nom de la tache" class="text-input from-center">
+                    <input type="submit" class="submit_btn" value="Ajouter" />
+                
+                {% else %}
+
+                    <select name="menu_choix_utilisateur_tache" id="choix_individu" class="choix_individu">
+                        <option> -- Membre -- </option>
+                        {% for element in utilisateurs %}
+                            <option value="{{element[0]}}">{{element[0]}}</option>
+                        {% endfor %}
+                    </select>
+
+                    <input type="text" name="nom_tache" autocomplete="off" placeholder="Nom de la tache" class="text-input from-center">
+                    <input type="submit" class="submit_btn" value="Ajouter" />
+
+                {% endif %}
+                </div> 
+
+            </form>
+        </div>
+
+        <div class="canvas_chart">
+            <canvas id="chart" width="600" height="400" class="chart_total"></canvas>
+            <canvas id="chart_complete" width="600" height="400" class="chart_complete"></canvas>
+        </div>
+    <script>
+      var barData = {
+        labels : [
+          {% for item in labels %}
+           "{{ item }}",
+          {% endfor %}
+	],
+
+        datasets : [{
+          fillColor: "rgba(151,187,205,0.2)",
+          strokeColor: "rgba(151,187,205,1)",
+          pointColor: "rgba(151,187,205,1)",
+          data : [
+            {% for item in values %}
+               "{{ item }}",
+              {% endfor %}
+	    ]
+          }
+        ]
+      }
+
+     var mychart = document.getElementById("chart").getContext("2d");
+
+       steps = 10
+       max = {{max}}
+
+     new Chart(mychart).Bar(barData, {
+       scaleOverride: true,
+       scaleSteps: steps,
+       scaleStepWidth: Math.ceil(max / steps),
+       scaleStartValue: 0,
+       scaleShowVerticalLines: true,
+       scaleShowGridLines : true,
+       barShowStroke : true,
+       scaleShowLabels: true
+       }
+     );
+
+      var barData = {
+        labels : [
+          {% for item in labels %}
+           "{{ item }}",
+          {% endfor %}
+	],
+
+        datasets : [{
+          fillColor: "rgba(151,187,205,0.2)",
+          strokeColor: "rgba(151,187,205,1)",
+          pointColor: "rgba(151,187,205,1)",
+          data : [
+            {% for item in values_complete %}
+               "{{ item }}",
+              {% endfor %}
+	    ]
+          }
+        ]
+      }
+
+     var mychart_complete = document.getElementById("chart_complete").getContext("2d");
+
+       steps = 10
+       max = {{max}}
+
+     new Chart(mychart_complete).Bar(barData, {
+       scaleOverride: true,
+       scaleSteps: steps,
+       scaleStepWidth: Math.ceil(max / steps),
+       scaleStartValue: 0,
+       scaleShowVerticalLines: true,
+       scaleShowGridLines : true,
+       barShowStroke : true,
+       scaleShowLabels: true
+       }
+     );
+
+    </script>
+
+    {% endblock %}
+</center>
+
+
+<div class="done">Done</div>

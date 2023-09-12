@@ -1,0 +1,61 @@
+<link
+      href="../static/css/style_gantt.css"
+      rel="stylesheet"
+      type="text/css"/>
+
+<center>
+
+    <div class="titre">The Project Manager</div>
+    <div class="degrade-titre"></div>
+    <div class="menu_gauche"></div>
+    <div class="menu_droite"></div>
+    <span class="texte_menu_gauche" href="/sandbox">Mon Profil</span>
+    <span class="texte_menu_droite">Project Overview</span>
+    <div class ="espace_inter_menu"></div>
+    <div class="degrade-titre"></div>    
+    <br><br>
+
+    <div class="lmenu-header-wrapper">
+        <div class="msg_lmenu">Menu</div><br>
+        <div class="lmenu-divider"></div>
+        <div class="onglet">Avancement</div>
+        <div class="onglet">Gantt</div>
+        <div class="onglet">Notes</div>
+        <div class="onglet">Réglages</div>
+
+    </div>
+    <div class="vertical-divider"></div>
+
+    <div class="avancement-wrapper">
+        <div class="Avancement-titre">Avancement</div>
+        <div class="sous-barre"></div>
+        <div class="sur-barre"></div>
+    </div>
+
+    <div class="taches-dash">
+        <div class="taches-dash-header">
+            <span class="taches-dash-Prio">Prio</span>
+            <span class="taches-dash-done">Fini</span>
+            <span class="taches-dash-titre">Prochaines taches</span>
+            <span class="taches-dash-proprietaire">Respo</span>
+            <div class="taches-dash-header-divider"></div>
+        </div>
+        <div class="taches-liste">
+        {% block content %}
+            {% for i in range(n) %}
+                <div class="task_line">
+                    <div class="hidden-divider1"></div>
+                    <span class="prio_{{taches[i][4]}}">{{taches[i][4]}}</span>
+                    <span class="done_{{taches[i][0]}}">{{taches[i][0]}}</span>
+                    <span class="nom_tache_liste">{{taches[i][1]}}</span>
+                    <span class="Respo">{{utilisateurs[i]}}</span>
+                    <div class="hidden-divider2"></div>
+                </div>
+                <br>
+            {% endfor %}
+        {% endblock %}
+                </div>
+    </div>
+    <div class="temps_restant"></div>
+
+</center>

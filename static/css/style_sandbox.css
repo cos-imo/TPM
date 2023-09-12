@@ -1,0 +1,160 @@
+@font-face {
+	font-family: signature;
+	src: url(signature.ttf);
+}
+
+body {
+    background: black;
+    height : 100vh;
+    color:white
+}
+
+.titre{
+    font-family : signature;
+    font-size : 8em;
+}
+
+.degrade-titre{
+    position  : relative;
+	background: linear-gradient(to right, black, 3%, rgb(37, 37, 37), 15%,  white, 75%, rgb(37, 37, 37), 97%, black);
+	width: 100vw;
+	height: 2px;
+}
+
+.menu_gauche{
+    position : absolute;
+    width : 50vw;
+    height : 20px;
+    left : 0;
+}
+
+.menu_gauche:hover{
+    background: linear-gradient(to right, black, 6%, rgb(37, 37, 37), 30%,  white);
+}
+
+.texte_menu_gauche{
+    position : absolute;
+    right : 70vw;
+}
+
+.menu_droite{
+    position : absolute;
+    width : 50vw;
+    height : 20px;
+    left : 50vw;
+}
+
+.menu_droite:hover{
+    background: linear-gradient(to left, black, 6%, rgb(37, 37, 37), 30%,  white);
+}
+
+.menu_droite:hover ~ .texte_menu_droite {
+    color : black;
+}
+
+.menu_gauche:hover ~ .texte_menu_gauche {
+    color : black;
+}
+
+.texte_menu_droite{
+    position : absolute;
+    left : 70vw;
+}
+
+.bienvenue-divider{
+    position  : relative;
+	background: linear-gradient(to right, black, 3%, rgb(37, 37, 37), 15%,  white, 75%, rgb(37, 37, 37), 97%, black);
+	width: 15vw;
+	height: 2px;
+}
+
+.tache:hover{
+    color:gray;
+}
+
+.taches-wrapper{
+    width : 30vw;
+    
+}
+
+.choix_individu{
+    position: relative;
+}
+
+.done{
+    position : absolute;
+    top : 98vh;
+    left:98vw;
+}
+
+.submit_btn{
+    background-color: black;
+    color : white;
+}
+
+.del_btn{
+    position : relative;
+    background-color : black;
+    color : white;
+    float : right;
+    right : 25px;
+    bottom : 5px;
+}
+
+.submit_check_btn{
+    background-color: black;
+    color : white;
+}
+
+.tache{
+    width: 500px;
+}
+
+.strikethrough{
+    position : relative;
+    float : left;
+    left : 3vw;
+    bottom : 5px;
+}
+
+.strikethrough:checked + span{
+    text-decoration:line-through
+}
+
+.taches-dashboard{
+    position : absolute;
+    left : 20vw;
+}
+
+.tache_divider{
+    position  : relative;
+	background: linear-gradient(to right, black, 3%, rgb(37, 37, 37), 15%,  white, 75%, rgb(37, 37, 37), 97%, black);
+	width: 30vw;
+	height: 2px;
+}
+
+
+.taches_header_label{
+    font-family : signature;
+    font-size : 6em;
+}
+
+.espace_inter_menu{
+    height : 20px;
+}
+
+.tache_underline{
+	background: linear-gradient(to right, black, 3%, rgb(37, 37, 37), 15%,  white, 75%, rgb(37, 37, 37), 97%, black);
+	width: 15vw;
+	height: 2px;
+}
+
+.bienvenue-wrapper{
+    position : absolute;
+    left : 50vw;
+}
+
+.canvas_chart{
+    position : absolute;
+    right : 20vw;
+}

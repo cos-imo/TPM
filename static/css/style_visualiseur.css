@@ -1,0 +1,478 @@
+@font-face {
+	font-family: signature;
+	src: url(signature.ttf);
+}
+
+body {
+    background: black;
+    height : 100vh;
+    color:white
+}
+
+.titre{
+    font-family : signature;
+    font-size : 8em;
+}
+
+.degrade-titre{
+    position  : relative;
+	background: linear-gradient(to right, black, 3%, rgb(37, 37, 37), 15%,  white, 75%, rgb(37, 37, 37), 97%, black);
+	width: 100vw;
+	height: 2px;
+}
+
+.menu_gauche{
+    position : absolute;
+    left: 0;
+    width : 50vw;
+    height : 20px;
+}
+
+.menu_gauche:hover{
+    background: linear-gradient(to right, black, 6%, rgb(37, 37, 37), 30%,  white);
+}
+
+.texte_menu_gauche{
+    position : absolute;
+    right : 70vw;
+}
+
+.menu_droite{
+    position : absolute;
+    width : 50vw;
+    height : 20px;
+    left : 50vw;
+}
+
+.menu_droite:hover{
+    background: linear-gradient(to left, black, 6%, rgb(37, 37, 37), 30%,  white);
+}
+
+.menu_droite:hover ~ .texte_menu_droite {
+    color : black;
+}
+
+.menu_gauche:hover ~ .texte_menu_gauche {
+    color : black;
+}
+
+.texte_menu_droite{
+    position : absolute;
+    left : 70vw;
+}
+
+.lmenu-divider{
+    position  : relative;
+	background: linear-gradient(to right, black, 3%, rgb(37, 37, 37), 15%,  white);
+	width: 20vw;
+	height: 2px;
+}
+
+.espace_inter_menu{
+    height : 20px;
+}
+
+
+.lmenu-header-wrapper{
+    position : absolute;
+    right : 80vw;
+}
+
+.onglet{
+    position : relative;
+    font-family : signature;
+    color : white;
+    font-size : 4em;
+    text-decoration : none;
+}
+
+.onglet:hover{
+    text-shadow : horizontal-shadow vertical-shadow blur color, horizontal-shadow vertical-shadow blur color;
+    text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
+}
+
+.vertical-divider{
+    position : absolute;
+    left : 20vw;
+    height : 70vh;
+    width : 2px;
+
+	background: linear-gradient(to top, black, 3%, rgb(37, 37, 37), 15%,  white);
+    background-color : white;
+}
+
+.vertical-divider-right{
+    position : absolute;
+    right : 20vw;
+    height : 70vh;
+    width : 2px;
+
+	background: linear-gradient(to top, black, 3%, rgb(37, 37, 37), 10%,  white, 90%, rgb(37,37,37), 97%, black);
+    background-color : white;
+}
+
+.formulaire{
+    position : relative;
+    top : 3vh;
+    right : 3vw;;
+}
+
+.avancement-wrapper{
+    position : absolute;
+    top : 17vh;
+    left : 30vw;
+    width : 60vw;
+    height : 33vh;
+}
+
+.avancement-titre{
+    font-family : signature;
+    font-size : 7em;
+}
+
+.sous-barre{
+    z-index : -1;
+    position : relative;
+    top : 0;
+    left : 0;
+    width : 50vw;
+    height : 3px;
+	background: linear-gradient(to right, black, 3%, rgb(0, 75, 75), 15%,  rgb(0, 150, 150), 75%, rgb(0, 75, 75), 97%, black);
+}
+
+.taches-dash{
+    position : relative;
+    left : 30vw;
+    top :10vh;
+}
+
+.taches-dash-prio{
+    position : absolute;
+    left : 5vw;
+}
+
+.taches-dash-done{
+    position : absolute;
+    left : 10vw;
+}
+
+.taches-dash-titre{
+    position : absolute;
+    left : 15vw;
+}
+
+.taches-dash-proprietaire{
+    position : absolute;
+    left : 45vw;
+}
+
+.taches-dash-header-divider{
+    position  : absolute;
+    top : 3vh;
+	background: linear-gradient(to right, black, 3%, rgb(37, 37, 37), 15%,  white, 75%, rgb(37, 37, 37), 97%, black);
+	width: 60vw;
+	height: 2px;
+}
+
+.taches-liste{
+    position : absolute;
+    top : 4vh;
+}
+
+.prio_0{
+    position : absolute;
+    left : 6vw;
+    color : lime;
+}
+
+.prio_1{
+    position : absolute;
+    left : 6vw;
+    color: orange;
+}
+
+.prio_2{
+    position : absolute;
+    left : 6vw;
+    color : red;
+}
+
+.done_0{
+    position : absolute;
+    left : 11vw;
+    color : purple;
+}
+
+.done_1{
+    position : absolute;
+    left : 11vw;
+    color : rgb(0, 174, 255);
+}
+
+.nom_actions_liste{
+    position : absolute;
+    text-align : left;
+    left : 15vw;
+    width : 30vw;
+    color: white;
+}
+
+.respo{
+    position : absolute;
+    left : 45vw;
+
+    color : white;
+}
+
+.hidden-divider1{
+    position : relative;
+    left : 3vw;
+}
+
+.hidden-divider2{
+    position : relative;
+    left : 3vw;
+}
+
+.action_line:hover .hidden-divider1{
+    background: linear-gradient(to right, black, 3%, rgb(50, 50, 50), 15%,  rgb(200,200,200), 75%, rgb(50, 50, 50), 97%, black);
+	width: 50vw;
+	height: 1px;
+}
+
+.action_line:hover .hidden-divider2{
+    position : relative;
+    top : 2vh;
+    background: linear-gradient(to right, black, 3%, rgb(50, 50, 50), 15%,  rgb(200,200,200), 75%, rgb(50, 50, 50), 97%, black);
+	width: 50vw;
+	height: 1px;
+}
+
+.nom_tache{
+    position : relative;
+    font-size : 3vw;
+}
+
+.nom_utilisateur{
+    position : relative;
+    font-size : 1.5em;
+}
+
+.wrapper_date_debut{
+    position : relative;
+    right : 20vw;
+}
+
+.wrapper_date_fin{
+    position : relative;
+    right : 19.5vw;
+}
+
+.save_btn{
+    position : relative;
+    background-color : black;
+    color : white;
+    bottom : 4vh;
+    left : 13vw;
+}
+
+.taches_header{
+    position : relative;
+    left : 10vw;
+}
+
+.titre_divider{
+    position : relative;
+    height : 1px;
+    width : 10vw;
+    top : 3vw;
+    left : 3vw;
+    background-color: white;
+}
+.retour{
+    position : relative;
+    bottom : 8vh;
+    right: 23vw;
+    background-color : black;
+    color : white;
+}
+
+.cal_debut{
+    position : relative;
+    top : 5vh;
+    background-color : black;
+    color : white;
+}
+
+.cal_fin{
+    position : relative;
+    top : 6vh;
+    background-color : black;
+    color : white;
+}
+
+.cal_debut_label{
+    position : relative;
+    top : 5vh;
+    color : white;
+}
+
+.cal_fin_label{
+    position : relative;
+    color : white;
+    top : 6vh;
+}
+
+.choix_individu{
+    position : relative;
+    background-color : black;
+    color : white;
+}
+
+.choix_prio{
+    background-color : black;
+    color : white;
+}
+
+.envoyer{
+    position : relative;
+    background-color : black;
+    color : white;
+    bottom : 5vh;
+    left : 17.5vw;
+}
+
+.nom_tache_label{
+    position : relative;
+    left : 10.5vw;
+    bottom : 11vh;
+    border : none;
+    text-align : center;
+    background-color : black;
+    color : white;
+    font-size : 2.5em;
+}
+
+.terminer_tache{
+    position : relative;
+    background-color : red;
+    bottom : 9.25vh;
+    left : 25.5vw;
+}
+
+.annuler_tache_terminee{
+    position : relative;
+    bottom : 9.25vh;
+    left : 25.5vw;
+    background-color : green;
+}
+
+.switch-action{
+    position : relative;
+    bottom : 5vh;
+    left : 22vw;
+}
+
+
+.actions-dash{
+    position : relative;
+    left : 25vw;
+    top :10vh;
+}
+
+.actions-dash-prio{
+    position : absolute;
+    left : 5vw;
+}
+
+.actions-dash-done{
+    position : absolute;
+    left : 10vw;
+}
+
+.actions-dash-titre{
+    position : absolute;
+    left : 15vw;
+}
+
+.actions-dash-proprietaire{
+    position : absolute;
+    left : 45vw;
+}
+
+.actions-dash-header-divider{
+    position  : absolute;
+    top : 3vh;
+    right : 45vw;
+	background: linear-gradient(to right, black, 3%, rgb(37, 37, 37), 15%,  white, 75%, rgb(37, 37, 37), 97%, black);
+	width: 50vw;
+	height: 2px;
+}
+
+.actions-liste{
+    position : absolute;
+    top : 4vh;
+}
+
+.supprimer_tache{
+    position : relative;
+    background-color : black;
+    color : white;
+    bottom : 2vh;
+    left : 25.5vw;
+}
+
+
+.creer_action:hover{
+    text-decoration : none;
+}
+
+.creer_action:hover .hidden-divider1{
+    background: linear-gradient(to right, black, 3%, rgb(50, 50, 50), 15%,  rgb(200,200,200), 75%, rgb(50, 50, 50), 97%, black);
+	width: 50vw;
+	height: 1px;
+}
+.creer_action:hover .hidden-divider2{
+    position : relative;
+    top : 0;
+    background: linear-gradient(to right, black, 3%, rgb(50, 50, 50), 15%,  rgb(200,200,200), 75%, rgb(50, 50, 50), 97%, black);
+	width: 50vw;
+	height: 1px;
+}
+/*
+.creer_action .nv_action_label{
+    position : absolute;
+    left : 15vw;
+}*/
+
+.nv_action_label{
+    position : relative;
+    left: 0;
+    top:0;
+    height : 2vh;
+    text-decoration : none;
+    color : white;
+}
+
+.nv_action_label:hover{
+    position : relative;
+    text-decoration : none;
+    color : white;
+}
+
+.wrapper-message{
+    position : absolute;
+    bottom : 0;
+    right : 0;
+}
+
+.label_message{
+    position : relative;
+    width : 15vw;
+}
+
+.messages-wrapper{
+    position : absolute;
+    top : 15vw;
+    left : 81vw;
+}

@@ -1,0 +1,190 @@
+@font-face {
+	font-family: signature;
+	src: url(signature.ttf);
+}
+
+body {
+    background: black;
+    height : 100vh;
+}
+
+.titre{
+  font-family : signature;
+  font-size : 8em;
+  color : white;
+}
+
+.degrade-titre{
+  position  : relative;
+background: linear-gradient(to right, black, 3%, rgb(37, 37, 37), 15%,  white, 75%, rgb(37, 37, 37), 97%, black);
+width: 100vw;
+height: 2px;
+}
+
+.menu_gauche{
+  position : absolute;
+  width : 50vw;
+  height : 20px;
+}
+
+.menu_gauche:hover{
+  background: linear-gradient(to right, black, 6%, rgb(37, 37, 37), 30%,  white);
+}
+
+.texte_menu_gauche{
+  position : absolute;
+  right : 70vw;
+  color : white;
+}
+
+.menu_droite{
+  position : absolute;
+  width : 50vw;
+  height : 20px;
+  left : 50vw;
+}
+
+.menu_droite:hover{
+  background: linear-gradient(to left, black, 6%, rgb(37, 37, 37), 30%,  white);
+}
+
+.menu_droite:hover ~ .texte_menu_droite {
+  color : black;
+}
+
+.menu_gauche:hover ~ .texte_menu_gauche {
+  color : black;
+}
+
+.texte_menu_droite{
+  position : absolute;
+  left : 70vw;
+  color : white;
+}
+
+.espace_inter_menu{
+  height : 20px;
+}
+
+.submit_btn{
+    position: relative;
+}
+
+.input-container{
+    width : 280px;
+    position : relative;
+}
+
+.text-input{
+    border: none;
+    text-align : center;
+    display:inline-block;
+    background-size: 200% 200%;
+    transition: background-position 1s;
+    
+}
+
+.text-input:hover{
+    display:inline-block;
+    background-size: 200% 200%;
+    transition: background-position 1s;
+}
+
+.box {
+    width: 200px; height: 100px;
+    background-size: 100% 200%;
+    background-image: linear-gradient(to top, red 50%, black 50%);
+    -webkit-transition: background-position 1s;
+    -moz-transition: background-position 1s;
+    transition: background-position 1s;
+}
+
+.box:hover {
+    background-position: 0 -100%;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    display:inline-block;
+    background-size: 200% 200%;
+    transition: background-position 1s;
+}
+  
+.to-top{
+  background-image: linear-gradient(to top, white 50%, black 0);
+  background-position: top;
+}
+  
+.to-top:hover {
+  background-position: bottom;
+}
+  
+.to-bottom{
+  background-image: linear-gradient(to bottom, white 50%, black 0);
+  background-position: bottom;
+}
+  
+.to-bottom:hover {
+  background-position: top;
+}
+  
+.to-left{
+  background-image: linear-gradient(to left, white 50%, black 0);
+  background-position: left;
+}
+  
+.to-left:hover {
+  background-position: right;
+}
+  
+.to-right{
+  background-image: linear-gradient(to right, white 50%, black 0);
+  background-position: right;
+}
+  
+.to-right:hover {
+  background-position: left;
+}
+
+.to-center{
+  background: 
+    linear-gradient(black,black) no-repeat,
+    red;
+  background-size: 100% 100%;
+  background-position:center;
+}
+  
+.to-center:hover {
+  background-size: 0% 100%; /* Or 100% 0% */
+}
+  
+.from-center{
+  background-image: 
+    linear-gradient(to left, black, white, white, black);
+  background-size: 0% 100%;  /* Or 100% 0% */
+  background-position:center;
+}
+  
+.from-center:hover {
+  background-size: 100% 100%;
+}
+  
+.diagonal-right{
+  background-image:linear-gradient(to bottom right,red 49.5%,black 50%);
+  background-size: 200% 200%;
+  background-position:bottom right;
+}
+  
+.diagonal-right:hover {
+  background-position:top left;
+}
+  
+.diagonal-left{
+  background-image:linear-gradient(to bottom left,red 49.5%,black 50%);
+  background-size: 200% 200%;
+  background-position:bottom left;
+}
+  
+.diagonal-left:hover {
+  background-position:top right;
+}
