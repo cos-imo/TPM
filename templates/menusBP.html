@@ -40,75 +40,7 @@
     {% block container %}
     {% endblock container%}
 
-    <div class="avancement-wrapper">
-        <div class="Avancement-titre">Avancement</div>
-        <div class="sous-barre"></div>
-        <div class="sur-barre"></div>
-    </div>
-    <div class="infos_avancement_wrapper">
-        <div class="compteur_terminees_wrapper">
-            <div class="compteur_terminees">
-                {{nb_done}}
-            </div>
-            <br>
-            <a class="compteur_terminees_label">
-                tâches terminées
-            </a>
-        </div>
-        <div class="compteur_total_wrapper">
-            <div class="compteur_total">
-                {{nb_total}}
-            </div>
-            <br>
-            <a class="compteur_total_label">
-                tâches
-            </a>
-        </div>
-        <div class="compteur_non_terminees_wrapper">
-            <div class="compteur_non_terminees">
-                {{nb_not_done}}
-            </div>
-            <br>
-            <a class="compteur_non_terminees_label">
-                tâches non terminées
-            </a>
-        </div>
-    </div>
-    <div class="taches-dash">
-        <div class="taches-dash-header">
-            <span class="taches-dash-Prio">Prio</span>
-            <span class="taches-dash-done">Fini</span>
-            <span class="taches-dash-titre">Prochaines taches</span>
-            <span class="taches-dash-proprietaire">Respo</span>
-            <div class="taches-dash-header-divider"></div>
-        </div>
-        <div class="taches-liste">
-            <a href="creer_tache" class="creer_tache">
-                <div class="hidden-divider1-creer"></div>
-                    <span class="nv_tache_label">(+) Nouvelle tache</span>
-                <div class="hidden-divider2-creer"></div>
-            </a>
-        {% block content %}
-            {% for i in range(n) %}
-                <a class="task_line" href="/vuetache/{{taches[i][3]}}">
-                    <div class="hidden-divider1"></div>
-                    <span class="prio_{{taches[i][4]}}">•</span>
-                    {% if taches[i][0]==1 %}
-                        <span class="done_{{taches[i][0]}}">✓</span>
-                    {% else %}
-                    <span class="done_{{taches[i][0]}}">✗</span>
-                    {% endif %}
-                    <span class="nom_tache_liste">{{taches[i][1]}}</span>
-                    <span class="Respo">{{utilisateurs[i]}}</span>
-                    <div class="hidden-divider2"></div>
-                </a>
-                <br>
-            {% endfor %}
-        {% endblock %}
-                </div>
-    </div>
-    <div class="temps_restant"></div>
-
+    
 </center>
 
 </body>
