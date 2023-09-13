@@ -161,8 +161,8 @@
         <input type="label" class="nom_tache_label" name="nom_tache" value="{{infos_taches[0][1]}}"/>
         <input type="submit" class="save_btn" value="Sauvegarder" />
     </form>
-    <form action="/overview">
-        <input type="button" class="retour" href="/overview" value="<< Retour" />
+    <form>
+        <input type="button" class="retour" onclick="history.back()" value="<< Retour" />
     </form>
     <form action="/supprimer_tache/{{infos_taches[0][3]}}">
         <input type="submit" class="supprimer_tache" value="Supprimer" />
