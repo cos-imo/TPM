@@ -278,9 +278,8 @@ body {
 }
 
 .respo{
-    position : absolute;
+    position : static;
     left : 45vw;
-
     color : white;
 }
 
@@ -291,7 +290,6 @@ body {
 
 .hidden-divider2{
     position : relative;
-    top:10vh;
     left : 3vw;
 }
 
@@ -302,8 +300,6 @@ body {
 }
 
 .task_line:hover .hidden-divider2{
-    position : relative;
-    top : 2vh;
     background: linear-gradient(to right, black, 3%, rgb(50, 50, 50), 15%,  rgb(200,200,200), 75%, rgb(50, 50, 50), 97%, black);
 	width: 50vw;
 	height: 1px;
@@ -312,11 +308,6 @@ body {
 .creer_tache{
     text-decoration : none;
 }
-
-/*.creer_tache:hover{
-    position : relative;
-    right : 0;
-}*/
 
 .creer_tache:hover .hidden-divider1-creer{
     background: linear-gradient(to right, black, 3%, rgb(50, 50, 50), 15%,  rgb(200,200,200), 75%, rgb(50, 50, 50), 97%, black);
