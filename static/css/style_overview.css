@@ -9,9 +9,9 @@ body {
     color:white
 }
 
-.titre{
-    font-family : signature;
-    font-size : 8em;
+.pass{
+    position : absolute;
+    top: 55vh;
 }
 
 .degrade-titre{

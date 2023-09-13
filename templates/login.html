@@ -4,32 +4,18 @@
     {% endblock header %}
     {% block container %}
     <div class="box_header"></div>
-<center>    <div class="titre">The Project Manager</div></center>
-    <div class="degrade-titre"></div>
-    <div class="menu_gauche"></div>
-    <div class="menu_droite"></div>
-    <span class="texte_menu_gauche">Mon Profil</span>
-    <span class="texte_menu_droite">Project Overview</span>
-    <div class ="espace_inter_menu"></div>
-    <div class="degrade-titre"></div>    
+<center>    <div class="titre">The Project Manager</div></center> 
     <br><br>
 
     <center>
 
-      <form action="" , method="POST">
-        <input type="text" name="username" autocomplete="off" placeholder="Identifiant" required class="text-input from-center">
+      <form action="" , method="POST" class="connexion">
+        <input type="text" name="username" autocomplete="off" placeholder="Identifiant" required class="usr text-input from-center">
         <br />
-        <input type="password" name="password" autocomplete="off" placeholder="Password" required class="text-input to-left to-right">
+        <input type="password" name="password" autocomplete="off" placeholder="Password" required class="pass text-input to-left to-right">
         <br />
 
         <input type="submit" class="submit_btn" value="Connexion" />
       </form>
-      <div class="box"></div>
-
-      <br>
-
-      <div class="box to-left"></div>
-
-      <div class="box to-right"></div>
     </center>
     {% endblock container%}

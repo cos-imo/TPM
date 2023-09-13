@@ -14,6 +14,12 @@ body {
   color : white;
 }
 
+.connexion{
+  position : absolute;
+  top : 40vh;
+  left : 75vh;
+}
+
 .degrade-titre{
   position  : relative;
 background: linear-gradient(to right, black, 3%, rgb(37, 37, 37), 15%,  white, 75%, rgb(37, 37, 37), 97%, black);
