@@ -439,11 +439,6 @@ body {
 	width: 50vw;
 	height: 1px;
 }
-/*
-.creer_action .nv_action_label{
-    position : absolute;
-    left : 15vw;
-}*/
 
 .nv_action_label{
     position : relative;
