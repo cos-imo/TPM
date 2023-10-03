@@ -181,7 +181,7 @@ def gantt():
     nb=len(liste_taches)
     return(render_template("gantt.html", nom=nom[0][0], taches=liste_taches, id=session["id_utilisateur"], utilisateurs=lst, n=nb))
 
-@app.route("/vuetache/<int:tache_id>", methods=['GET', 'POST'])
+"""@app.route("/vuetache/<int:tache_id>", methods=['GET', 'POST'])
 def rendu_tache(tache_id):
     if request.method=='POST':
         if request.form.get("nom_tache"):
@@ -229,7 +229,7 @@ def rendu_tache(tache_id):
     sender_liste=[]
     for i in range(n):
         sender_liste.append(get_db().cursor().execute("SELECT nom FROM utilisateurs WHERE id=(?)",(messages_liste[i][3],)).fetchall()[0][0])
-    return render_template("vue_tache.html", infos_taches=lst_taches, infos_actions=lst_actions, nom_utilisateur=utilisateur, utilisateurs=liste_utilisateurs, n=nb, actions=liste_actions, id=tache_id, messages=messages_liste, len_messages=int(n), individus=sender_liste)
+    return render_template("vue_tache.html", infos_taches=lst_taches, infos_actions=lst_actions, nom_utilisateur=utilisateur, utilisateurs=liste_utilisateurs, n=nb, actions=liste_actions, id=tache_id, messages=messages_liste, len_messages=int(n), individus=sender_liste)"""
 
 @app.route('/reunions')
 def reunions():
