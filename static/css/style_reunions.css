@@ -124,7 +124,7 @@ body {
 }
 
 .taches-dash{
-    position : relative;
+    position : absolute;
     left : 30vw;
     top :10vh;
 }

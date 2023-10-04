@@ -279,6 +279,7 @@ body {
 
 .respo{
     position : absolute;
+    right : 50vw;
     color : white;
 }
 
@@ -292,6 +293,9 @@ body {
     left : 3vw;
 }
 
+.task_line{
+    position : relative;
+}
 
 .task_line:hover .hidden-divider1{
     position: absolute;
@@ -325,4 +329,13 @@ body {
     background: linear-gradient(to right, black, 3%, rgb(50, 50, 50), 15%,  rgb(200,200,200), 75%, rgb(50, 50, 50), 97%, black);
 	width: 50vw;
 	height: 1px;
+}
+
+.action_line{
+    display: none;
+}
+
+.task_line:hover .action_line{
+    display: block;
+    color: red;
 }
