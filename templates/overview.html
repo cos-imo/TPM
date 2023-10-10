@@ -52,7 +52,7 @@
             </a>
         {% block content %}
             {% for i in range(n) %}
-                <a class="task_line" href="/vuetache/{{taches[i][3]}}">
+                <a class="task_line">
                     <div class="hidden-divider1"></div>
                     <span class="prio_{{taches[i][4]}}">•</span>
                     {% if taches[i][0]==1 %}
@@ -64,7 +64,9 @@
                     <span class="Respo">{{utilisateurs[i]}}</span>
                     <div class="hidden-divider2"></div>
                 </a>
-                <br>
+                <a class="action_line">
+                    test
+                </a>
             {% endfor %}
         {% endblock %}
                 </div>

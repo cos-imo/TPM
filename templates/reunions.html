@@ -1,65 +1,61 @@
-<link
-      href="../static/css/style_reunions.css"
-      rel="stylesheet"
-      type="text/css"/>
+{% extends 'menusBP.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link
+    href="../static/css/reunions.css"
+    rel="stylesheet"
+    type="text/css"/>
+    <title>Overview</title>
+
+    {% block header %}
+    {% endblock header %}
+</head>
+<body>
+
+{% block container %}
 
 <center>
 
-    <div class="titre">The Project Manager</div>
-    <div class="degrade-titre"></div>
-    <a class="menu_gauche" href="/sandbox"></a>
-    <a class="menu_droite" href="/overview"></a>
-    <span class="texte_menu_gauche" href="/sandbox">Mon Profil</span>
-    <span class="texte_menu_droite">Project Overview</span>
-    <div class ="espace_inter_menu"></div>
-    <div class="degrade-titre"></div>    
-    <br><br>
+<div class="vertical-divider"></div>
 
-    <div class="lmenu-header-wrapper">
-        <div class="msg_lmenu">Menu</div><br>
-        <div class="lmenu-divider"></div>
-        <a class="onglet" href="/overview">Avancement</a>
-        <div class="onglet">Gantt</div>
-        <a class="onglet" href="/reunions">Réunions</a>
-        <div class="onglet">Notes</div>
-        <div class="onglet">Réglages</div>
+<div class="reunions-wrapper">
+    <div class="reunions-titre">Réunions</div>
+</div>
 
+<div class="taches-dash">
+    <div class="taches-dash-header">
+        <span class="taches-dash-Prio">Date</span>
+        <span class="taches-dash-done">Lieu</span>
+        <span class="taches-dash-titre">Motif</span>
+        <span class="taches-dash-proprietaire">Secrétaire</span>
+        <div class="taches-dash-header-divider"></div>
     </div>
-    <div class="vertical-divider"></div>
-
-    <div class="reunions-wrapper">
-        <div class="reunions-titre">Réunions</div>
-    </div>
-
-    <div class="taches-dash">
-        <div class="taches-dash-header">
-            <span class="taches-dash-Prio">Date</span>
-            <span class="taches-dash-done">Lieu</span>
-            <span class="taches-dash-titre">Motif</span>
-            <span class="taches-dash-proprietaire">Secrétaire</span>
-            <div class="taches-dash-header-divider"></div>
-        </div>
-        <div class="taches-liste">
-        {% block content %}
-                <a class="task_line" href="/reunions">
-                    <div class="hidden-divider1"></div>
-                    <span class="nouvelle_reu"> + Nouvelle réunion</span>
-                    <div class="hidden-divider2"></div>
-                </a><br
-            {% for element in infos %}
-                <a class="task_line" href="/reunions">
-                    <div class="hidden-divider1"></div>
-                    <span class="reu_date">{{element[1]}}</span>
-                    <span class="reu_lieu">{{element[2]}}</span>
-                    <span class="reu_motif">{{element[4 ]}}</span>
-                    <span class="secretaire">{{secretaire}}</span>
-                    <div class="hidden-divider2"></div>
-                </a>
-                <br>
-            {% endfor %}
-        {% endblock %}
-                </div>
-    </div>
-    <div class="temps_restant"></div>
+    <div class="taches-liste">
+    {% block content %}
+            <a class="task_line" href="/reunions">
+                <div class="hidden-divider1"></div>
+                <span class="nouvelle_reu"> + Nouvelle réunion</span>
+                <div class="hidden-divider2"></div>
+            </a><br
+        {% for element in infos %}
+            <a class="task_line" href="/reunions">
+                <div class="hidden-divider1"></div>
+                <span class="reu_date">{{element[1]}}</span>
+                <span class="reu_lieu">{{element[2]}}</span>
+                <span class="reu_motif">{{element[4 ]}}</span>
+                <span class="secretaire">{{secretaire}}</span>
+                <div class="hidden-divider2"></div>
+            </a>
+            <br>
+        {% endfor %}
+    {% endblock %}
+            </div>
+</div>
+<div class="temps_restant"></div>
 
 </center>
+
+
+{% endblock container%}
