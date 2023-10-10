@@ -214,6 +214,7 @@ body {
 
 .taches-liste{
     position : absolute;
+    height:70vh;
     top : 4vh;
 }
 
@@ -254,7 +255,7 @@ body {
 }
 
 .nom_tache_liste{
-    position : absolute;
+    position : relative;
     text-align : left;
     left : 15vw;
     width : 30vw;
@@ -277,9 +278,11 @@ body {
     color: white;
 }
 
-.respo{
-    position : absolute;
-    right : 50vw;
+.Respo{
+    position : relative;
+    display: table;
+    bottom: 2vh;
+    left : 40vw;
     color : white;
 }
 
@@ -290,11 +293,14 @@ body {
 
 .hidden-divider2{
     position : relative;
+    top:0;
     left : 3vw;
 }
 
 .task_line{
     position : relative;
+    top:0;
+    height : 1vh;
 }
 
 .task_line:hover .hidden-divider1{
